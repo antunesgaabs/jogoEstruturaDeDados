@@ -1,0 +1,15 @@
+PASTA DE IMAGENS DOS SEUS HERÓIS (bônus)
+
+Coloque aqui as imagens dos heróis que você criar.
+Formatos que funcionam: .png, .jpg, .jpeg, .webp, .gif, .svg
+
+Depois, em js/bonus/meus-herois.js, escreva o caminho no herói:
+
+    imagem: 'imagens/nome-do-arquivo.png',
+
+Dicas:
+- O nome do arquivo precisa ser IGUAL ao que você escreveu no código
+  (letras maiúsculas/minúsculas contam). Evite espaços e acentos no nome.
+- A imagem aparece num retângulo de 240 x 130. Imagens largas (horizontais)
+  ficam melhores; o resto é cortado para caber.
+- O arquivo exemplo-heroi.svg está aqui só como exemplo.

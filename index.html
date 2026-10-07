@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Trunfo de Heróis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div>
+      <h1>Super Trunfo de Heróis</h1>
+      <p class="subtitulo">Projeto de POO · Módulo A</p>
+    </div>
+    <button id="btnVerificacao" class="botao-verificacao">🧪 Verificação</button>
+  </header>
+
+  <div id="avisoErro" class="aviso-erro" hidden></div>
+
+  <!-- Painel com o resultado dos testes de cada TODO -->
+  <aside id="painelTestes" class="painel-testes" hidden>
+    <div class="painel-testes-topo">
+      <h2>Verificação dos TODOs</h2>
+      <button id="btnFecharTestes" class="botao-fechar" aria-label="Fechar">×</button>
+    </div>
+    <p class="dica">Salvou um arquivo? Aperte <kbd>F5</kbd> para recarregar e rodar a verificação de novo.</p>
+    <ul id="listaTestes"></ul>
+  </aside>
+
+  <main>
+    <!-- Tela inicial -->
+    <section id="telaInicio" class="tela-inicio">
+      <div class="cartao-inicio">
+        <p class="emojis-inicio">☀️ 🌊 🦇 ⚡</p>
+        <h2>Monte seu time e desafie o computador</h2>
+        <ol class="regras">
+          <li id="regraCartas">Cada jogador recebe 8 cartas de heróis.</li>
+          <li>Quem está na vez escolhe um atributo da sua carta.</li>
+          <li>O maior valor vence e leva as duas cartas.</li>
+          <li>Em caso de empate, as cartas ficam no monte para a próxima rodada.</li>
+          <li>Ganha quem ficar com todas as cartas, ou com mais cartas depois de 30 rodadas.</li>
+        </ol>
+        <label for="nomeDupla">Nome da dupla</label>
+        <input id="nomeDupla" type="text" placeholder="Ex: Ana e Bruno" maxlength="30">
+        <button id="btnComecar" class="botao-principal">Começar partida</button>
+        <p id="avisoBloqueio" class="aviso-bloqueio" hidden></p>
+        <div id="avisoBonus" class="aviso-bonus" hidden></div>
+      </div>
+    </section>
+
+    <!-- Tela do jogo -->
+    <section id="telaJogo" class="tela-jogo" hidden>
+      <div class="placar">
+        <div class="placar-jogador">
+          <span id="nomeHumano" class="placar-nome"></span>
+          <span id="cartasHumano" class="placar-numero"></span>
+        </div>
+        <div class="placar-centro">
+          <span id="infoRodada"></span>
+          <span id="infoMonte"></span>
+        </div>
+        <div class="placar-jogador placar-direita">
+          <span class="placar-nome">Computador</span>
+          <span id="cartasComputador" class="placar-numero"></span>
+        </div>
+      </div>
+
+      <div class="mesa">
+        <div id="slotHumano" class="slot"></div>
+        <div id="centro" class="centro"></div>
+        <div id="slotComputador" class="slot"></div>
+      </div>
+
+      <div class="paineis">
+        <div class="painel">
+          <h3>Sua coleção</h3>
+          <div id="colecao"></div>
+        </div>
+        <div class="painel">
+          <h3>Histórico</h3>
+          <ol id="historico" class="historico"></ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Dados e classe prontas -->
+  <script src="js/nao-mexer/dados.js"></script>
+
+  <!-- Bônus: heróis criados pelos alunos (opcional) -->
+  <script src="js/bonus/meus-herois.js"></script>
+  <script src="js/nao-mexer/bonus.js"></script>
+
+  <!-- As classes que VOCÊS completam -->
+  <script src="js/classes/Carta.js"></script>
+  <script src="js/classes/Jogador.js"></script>
+  <script src="js/nao-mexer/Baralho.js"></script>
+  <script src="js/classes/Jogo.js"></script>
+
+  <!-- Verificação e tela (prontos) -->
+  <script src="js/nao-mexer/testes.js"></script>
+  <script src="js/nao-mexer/ui.js"></script>
+</body>
+</html>
