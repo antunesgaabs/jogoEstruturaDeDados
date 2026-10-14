@@ -40,7 +40,7 @@ class Carta {
   // Conteúdo: operadores aritméticos (Semana 1)
   // ------------------------------------------------------------
   forcaTotal() {
-    // escreva seu código aqui
+    return this.forca + this.velocidade + this.inteligencia + this.poder
   }
 
   // ------------------------------------------------------------
@@ -54,7 +54,15 @@ class Carta {
   // Conteúdo: if / else if / else (Semana 2)
   // ------------------------------------------------------------
   raridade() {
-    // escreva seu código aqui
+    const teste2 = this.forcaTotal()
+    
+    if (teste2 >= 300) {
+      return 'Lendária';
+    } else if (teste2 >= 250) {
+      return 'Rara';
+    } else {
+      return 'Comum';
+    }
   }
 
   // ------------------------------------------------------------
@@ -69,7 +77,18 @@ class Carta {
   // Conteúdo: switch com default (Semana 2)
   // ------------------------------------------------------------
   valorDe(atributo) {
-    // escreva seu código aqui
+    switch (atributo) {
+      case 'forca':
+        return this.forca;
+      case 'velocidade':
+        return this.velocidade;
+      case 'inteligencia':
+        return this.inteligencia;
+      case 'poder':
+        return this.poder;
+      default:
+        return 0;
+    }
   }
 
   // ------------------------------------------------------------
