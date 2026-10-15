@@ -100,6 +100,7 @@ class Carta {
   // Conteúdo: template literals com ${ } (Semana 4)
   // ------------------------------------------------------------
   resumo() {
-    // escreva seu código aqui
+    return `${this.emoji} ${this.nome} (${this.equipe}) — força total ${this.forcaTotal()}`;
   }
 }
+
