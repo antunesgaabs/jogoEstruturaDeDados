@@ -36,7 +36,7 @@ class Jogador {
   // Conteúdo: .length e operadores de comparação (Semanas 1 e 3)
   // ------------------------------------------------------------
   temCartas() {
-    // escreva seu código aqui
+    return this.cartas.length > 0;
   }
 
   // ------------------------------------------------------------
@@ -48,7 +48,9 @@ class Jogador {
   // Conteúdo: for...of + push (Semana 3)
   // ------------------------------------------------------------
   receberCartas(lista) {
-    // escreva seu código aqui
+    for (const carta of lista) {
+      this.cartas.push(carta);
+    }
   }
 
   // ------------------------------------------------------------
@@ -59,7 +61,7 @@ class Jogador {
   // Conteúdo: map (Semana 4)
   // ------------------------------------------------------------
   nomesDasCartas() {
-    // escreva seu código aqui
+    return this.cartas.map(carta => carta.nome);
   }
 
   // ------------------------------------------------------------
@@ -71,7 +73,7 @@ class Jogador {
   // Conteúdo: filter (Semana 4)
   // ------------------------------------------------------------
   cartasDaEquipe(equipe) {
-    // escreva seu código aqui
+    return this.cartas.filter(carta => carta.equipe === equipe);
   }
 
   // ------------------------------------------------------------
@@ -84,6 +86,12 @@ class Jogador {
   // Conteúdo: if + reduce (Semanas 2 e 4)
   // ------------------------------------------------------------
   forcaMedia() {
-    // escreva seu código aqui
+    if (this.cartas.length === 0) {
+      return 0;
+    }
+    const somaForca = this.cartas.reduce((acumulador, carta) => {
+      return acumulador + carta.forcaTotal();
+    }, 0);
+    return somaForca / this.cartas.length;
   }
 }
